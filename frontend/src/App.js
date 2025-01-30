@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Name from './Name/myName';
 import Clock from './Clock/time';
+import StarPattern from './Pattern-1/pattern';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
+import StarPattern2 from './Pattern-2/pattern';
 function App() {
   return (
    <>
@@ -10,6 +12,8 @@ function App() {
           <Routes>
             <Route path='/name' element={<Name/>}/>
             <Route path='/time' element={<Clock/>}/>
+            <Route path='/p1' element={<StarPattern rows={5}/>}/>
+            <Route path='/p2' element={<StarPattern2 rows={5}/>}/>
           </Routes>
       </BrowserRouter>
    </>
