@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "./converter.css";
 const TemperatureConverter = () => {
     const [temperature, setTemperature] = useState('');
     const [unit, setUnit] = useState('Celsius');
@@ -19,7 +19,9 @@ const TemperatureConverter = () => {
     };
 
     return (
-        <div style={{ textAlign: 'center', padding: '20px' }}>
+        <div className='cov_con'>
+        <div style={{ textAlign: 'center', padding: '20px' }}
+                className='in_cov'>
             <h2>Temperature Converter</h2>
             <input
                 type="text"
@@ -31,10 +33,11 @@ const TemperatureConverter = () => {
                 <option value="Celsius">Celsius</option>
                 <option value="Fahrenheit">Fahrenheit</option>
             </select>
-            <button onClick={handleConvert}>Convert</button>
+            <button className="con_button"onClick={handleConvert}>Convert</button>
             {convertedTemp && (
                 <p>Converted Temperature: {convertedTemp.value.toFixed(2)}° {convertedTemp.unit}</p>
             )}
+        </div>
         </div>
     );
 };
