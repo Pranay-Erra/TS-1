@@ -2,14 +2,10 @@ import React, { useState } from "react";
 import "./simpleCounter.css";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);//revisit
+  const [count, setCount] = useState(0);
 
-  const Increment = () => {
-    setCount(count + 1);
-  };
-
-  const Decrement = () => {
-    setCount(count - 1);
+  const changeCount = (value) => {
+    setCount((prevCount) => prevCount + value);
   };
 
   const Reset = () => {
@@ -26,10 +22,10 @@ const Counter = () => {
         {count}
       </h2>
       <div className="button-container">
-        <button className="counter-button increment" onClick={Increment}>
+        <button className="counter-button increment" onClick={() => changeCount(1)}>
           Increment
         </button>
-        <button className="counter-button decrement" onClick={Decrement}>
+        <button className="counter-button decrement" onClick={() => changeCount(-1)}>
           Decrement
         </button>
         <button className="counter-button reset" onClick={Reset}>

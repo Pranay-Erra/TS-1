@@ -8,6 +8,7 @@ import StarPattern2 from './Pattern-2/pattern';
 import Counter from './Counter/simpleCounter';
 import TemperatureConverter from './tempConverter/converter';
 import Home from './Home/home';
+import CounterDiff from './Diff/diffCounter';
 function App() {
   return (
    <>
@@ -20,6 +21,7 @@ function App() {
             <Route path='/p2' element={<StarPattern2 rows={5}/>}/>
             <Route path='/counter' element={<Counter/>}/>
             <Route path='/temp' element={<TemperatureConverter/>}/>
+            <Route path='/diff' element={<CounterDiff/>}/>
           </Routes>
       </BrowserRouter>
    </>
