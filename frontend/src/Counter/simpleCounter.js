@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./simpleCounter.css";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);//revisit
 
   const Increment = () => {
     setCount(count + 1);

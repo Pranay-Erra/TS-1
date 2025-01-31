@@ -4,7 +4,11 @@ const StarPattern = ({ rows }) => {
   const generatePattern = () => {
     let patternArray = [];
     for (let i = rows; i > 0; i--) {
-      patternArray.push("*".repeat(i));
+      let stars = "";
+      for (let j = 0; j < i; j++) {
+        stars += "*";
+      }
+      patternArray.push(stars);
     }
     return patternArray;
   };
